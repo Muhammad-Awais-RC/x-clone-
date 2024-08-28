@@ -16,9 +16,9 @@ const PORT = process.env.PORT || 5000;
 dotenv.config();
 
 cloudinary.config({
-	cloud_name: "de03yi6ww",
-	api_key: "296889825972427",
-	api_secret: "9zV1KbQdroOlBxguykBRzRGru6g",
+	cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+	api_key: process.env.CLOUDINARY_API_KEY,
+	api_secret: process.env.CLOUDINARY_API_SECERT,
 });
 
 app.use(express.json({ limit: "10mb" }));
